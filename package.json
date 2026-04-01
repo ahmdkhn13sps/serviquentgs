@@ -1,11 +1,7 @@
 {
   "name": "serviquentgs",
   "version": "1.0.0",
-  "description": "Serviquent Global Solutions - BPO & IT Services",
   "dependencies": {
     "resend": "^3.2.0"
-  },
-  "engines": {
-    "node": "24.x"
   }
 }
