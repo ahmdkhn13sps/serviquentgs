@@ -20,18 +20,15 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--lt);color:var(--tl);font-family:"DM Sans",sans-serif;overflow-x:hidden}
-
-/* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 52px;background:rgba(7,9,13,.96);backdrop-filter:blur(24px);border-bottom:1px solid var(--bdd)}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
 .logo img{height:44px;width:auto}
 .logo-top{font-family:"Syne",sans-serif;font-weight:800;font-size:17px;letter-spacing:.1em;color:#fff;text-transform:uppercase;display:block}
 .logo-btm{font-size:9.5px;letter-spacing:.24em;color:#7a90a2;text-transform:uppercase;display:block;margin-top:3px}
 .nav-links{display:flex;align-items:center;gap:18px;list-style:none}
-.nav-links a{color:var(--td2);text-decoration:none;font-size:13px;font-weight:500;padding:4px 0;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap;cursor:pointer}
+.nav-links a{color:var(--td2);text-decoration:none;font-size:13px;font-weight:500;padding:4px 0;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap}
 .nav-links a:hover{color:#fff;border-bottom-color:var(--acc3)}
-.nav-cta{background:var(--acc3)!important;color:#fff!important;padding:9px 20px!important;border-radius:6px!important;font-weight:600!important;border-bottom:none!important}
-.nav-cta:hover{background:var(--acc4)!important}
+.nav-cta{background:var(--acc3)!important;color:#fff!important;padding:9px 20px!important;border-radius:6px!important;font-weight:600!important;border-bottom:none!important;cursor:pointer}
 .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .ham span{display:block;width:24px;height:2px;background:var(--td2);border-radius:2px;transition:all .3s}
 .ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -41,24 +38,20 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .mob.open{display:flex}
 .mob a{color:var(--td2);text-decoration:none;font-size:15px;font-weight:500;padding:13px 0;border-bottom:1px solid var(--bdd);display:block;cursor:pointer}
 .mob a:last-child{background:var(--acc3);color:#fff;border-radius:8px;text-align:center;padding:14px;margin-top:12px;border-bottom:none;font-weight:600}
-
-/* ── BUTTONS ── */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-size:15px;font-weight:600;padding:14px 32px;border-radius:8px;cursor:pointer;border:none;transition:all .22s;font-family:"DM Sans",sans-serif;line-height:1;white-space:nowrap}
 .btn-acc{background:var(--acc3);color:#fff;box-shadow:0 4px 24px rgba(14,165,200,.35)}
 .btn-acc:hover{background:var(--acc4);transform:translateY(-2px)}
 .btn-wht{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.28)}
 .btn-wht:hover{background:rgba(255,255,255,.22)}
-.btn-dk{background:var(--acc);color:#fff}
-.btn-dk:hover{background:var(--acc2);transform:translateY(-2px)}
+.btn-dk{background:var(--acc);color:#fff}.btn-dk:hover{background:var(--acc2);transform:translateY(-2px)}
 .btn-outl{background:transparent;color:var(--acc);border:1.5px solid rgba(26,111,196,.4)}
 .btn-outl:hover{background:rgba(26,111,196,.08)}
 .btn-sm{padding:9px 20px;font-size:13px}
-
-/* ── HERO ── */
 .hero{position:relative;height:100vh;min-height:680px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-.hero-video{position:absolute;inset:0;z-index:0;background:#07090d}
-.hero-video video{position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%,-50%)}
-.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,9,13,.82) 0%,rgba(7,9,13,.5) 45%,rgba(7,9,13,.92) 100%)}
+.hero-bg{position:absolute;inset:0;z-index:0;background:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1800&q=80&auto=format&fit=crop') center/cover no-repeat}
+.hero-vid{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-vid video{position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%,-50%)}
+.hero-dark{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,9,13,.82) 0%,rgba(7,9,13,.5) 45%,rgba(7,9,13,.92) 100%)}
 .hero-grid{position:absolute;inset:0;z-index:2;background-image:linear-gradient(rgba(14,165,200,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,200,.05) 1px,transparent 1px);background-size:58px 58px;animation:gm 22s linear infinite}
 @keyframes gm{from{background-position:0 0}to{background-position:0 58px}}
 .hero-c{position:relative;z-index:3;max-width:1020px;margin:0 auto;padding:0 28px}
@@ -81,16 +74,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .scroll-cue{position:absolute;bottom:80px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--md);font-size:10px;letter-spacing:.16em;text-transform:uppercase}
 .scroll-ring{width:30px;height:30px;border:1px solid rgba(255,255,255,.14);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:13px;animation:bob 2.2s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
-
-/* ── TICKER ── */
 .trusted{background:var(--dk2);border-top:1px solid var(--bdd);border-bottom:1px solid var(--bdd);padding:18px 52px;display:flex;align-items:center;gap:28px;overflow:hidden}
 .t-lbl{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--md);white-space:nowrap;flex-shrink:0}
 .t-scroll{overflow:hidden;flex:1;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .t-track{display:flex;gap:44px;align-items:center;animation:tick 28s linear infinite;width:max-content}
 .t-track span{font-family:"Syne",sans-serif;font-weight:700;font-size:12px;color:var(--md);opacity:.38;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* ── SECTIONS ── */
 .sec{padding:100px 64px}
 .sec-dk{background:var(--dk)}.sec-dk2{background:var(--dk2)}.sec-lt{background:var(--lt)}.sec-lt2{background:var(--lt2)}
 .lbl-d{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px;color:var(--acc3)}
@@ -101,8 +90,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .ttl-l{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(26px,3.2vw,46px);line-height:1.08;letter-spacing:-.022em;color:var(--tl)}
 .sub-d{font-size:15.5px;font-weight:300;color:var(--td2);line-height:1.82;max-width:620px}
 .sub-l{font-size:15.5px;font-weight:300;color:var(--tl2);line-height:1.82;max-width:620px}
-
-/* ── COMPANY ── */
 .co-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
 .co-left p{font-size:15px;color:var(--tl2);line-height:1.88;margin-bottom:16px}
 .co-vals{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
@@ -128,8 +115,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .cst{background:var(--lt2);padding:16px;text-align:center}
 .cst .n{font-family:"Syne",sans-serif;font-weight:800;font-size:26px;color:var(--acc);line-height:1}
 .cst .l{font-size:10px;color:var(--ml);letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
-
-/* ── BPO CARDS ── */
 .bpo-hd{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;gap:40px;flex-wrap:wrap}
 .bpo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.04)}
 .sc{background:#0c1520;display:flex;flex-direction:column;overflow:hidden;position:relative;transition:transform .3s,box-shadow .3s;cursor:pointer}
@@ -147,8 +132,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .sc p{font-size:12.5px;color:var(--td2);line-height:1.67;flex:1}
 .sc-btn{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--acc3);background:rgba(14,165,200,.1);border:1px solid rgba(14,165,200,.22);padding:7px 14px;border-radius:5px;margin-top:14px;transition:all .2s;cursor:pointer;font-family:"DM Sans",sans-serif}
 .sc-btn:hover{background:rgba(14,165,200,.22);gap:10px}
-
-/* ── STATS ── */
 .stats-wrap{position:relative;overflow:hidden}
 .stats-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.1) saturate(.3)}
 .stats-fog{position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,9,13,.94) 0%,rgba(14,165,200,.07) 100%)}
@@ -156,12 +139,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .stats-body h2{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(22px,3vw,40px);color:#fff;margin-bottom:10px}
 .stats-body .sd{font-size:15px;color:var(--td2);font-weight:300;margin-bottom:52px}
 .stat-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.05)}
-.sb{background:rgba(7,9,13,.8);padding:40px 18px;backdrop-filter:blur(8px);text-align:center}
+.sb{background:rgba(7,9,13,.8);padding:40px 18px;text-align:center}
 .sb .n{font-family:"Syne",sans-serif;font-weight:800;font-size:50px;line-height:1;color:var(--acc3)}
 .sb .n sup{font-size:22px;vertical-align:super}
 .sb .l{font-size:11px;color:var(--md);margin-top:8px;letter-spacing:.1em;text-transform:uppercase}
-
-/* ── IT ── */
 .it-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .itc{background:var(--lt);border:1.5px solid var(--bdl);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:all .25s}
 .itc:hover{border-color:var(--acc);box-shadow:0 12px 48px rgba(26,111,196,.14);transform:translateY(-4px)}
@@ -172,9 +153,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .itc-body p{font-size:14px;color:var(--tl2);line-height:1.78;margin-bottom:14px;flex:1}
 .itc-body ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:7px;margin-bottom:20px}
 .itc-body ul li{font-size:13px;color:var(--ml);padding-left:17px;position:relative;line-height:1.55}
-.itc-body ul li::before{content:"→";position:absolute;left:0;color:var(--acc3);font-size:11px;top:2px}
-
-/* ── WHY ── */
+.itc-body ul li::before{content:"&#8594;";position:absolute;left:0;color:var(--acc3);font-size:11px;top:2px}
 .why-wrap{display:grid;grid-template-columns:1fr 1fr}
 .why-img{position:relative;overflow:hidden;min-height:680px}
 .why-img img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.44) saturate(.6)}
@@ -187,8 +166,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .wi-n{font-family:"Syne",sans-serif;font-weight:800;font-size:22px;color:rgba(14,165,200,.18);line-height:1;flex-shrink:0;width:30px;margin-top:2px}
 .wi h4{font-family:"Syne",sans-serif;font-weight:700;font-size:14.5px;color:var(--td);margin-bottom:6px}
 .wi p{font-size:13.5px;color:var(--td2);line-height:1.75}
-
-/* ── INDUSTRIES ── */
 .ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .ind{border-radius:12px;overflow:hidden;position:relative;height:158px;transition:transform .25s}
 .ind:hover{transform:translateY(-4px)}
@@ -196,8 +173,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .ind:hover img{filter:brightness(.6) saturate(.78)}
 .ind-veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,9,13,.92) 0%,transparent 55%)}
 .ind-lbl{position:absolute;bottom:14px;left:15px;font-family:"Syne",sans-serif;font-weight:700;font-size:13.5px;color:#fff;display:flex;align-items:center;gap:7px}
-
-/* ── PROCESS ── */
 .proc-hero{display:grid;grid-template-columns:1fr 1.35fr;border:1px solid var(--bdd);border-radius:14px;overflow:hidden;margin-bottom:64px}
 .proc-hero img{width:100%;height:100%;min-height:280px;object-fit:cover;display:block;filter:brightness(.65)}
 .proc-body{padding:48px;display:flex;flex-direction:column;justify-content:center;background:var(--dk3)}
@@ -209,8 +184,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .sn{width:52px;height:52px;border-radius:50%;border:1px solid rgba(14,165,200,.3);background:var(--dk3);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:"Syne",sans-serif;font-weight:800;font-size:14px;color:var(--acc3);position:relative;z-index:1}
 .step h4{font-family:"Syne",sans-serif;font-weight:700;font-size:13.5px;color:var(--td);margin-bottom:7px}
 .step p{font-size:12.5px;color:var(--md);line-height:1.65}
-
-/* ── TESTIMONIALS ── */
 .testi-top{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:20px}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .tc{background:var(--lt);border:1.5px solid var(--bdl);border-radius:14px;padding:30px 28px;display:flex;flex-direction:column;gap:16px;transition:all .25s}
@@ -221,8 +194,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .av{width:44px;height:44px;border-radius:50%;background:rgba(26,111,196,.1);display:flex;align-items:center;justify-content:center;font-family:"Syne",sans-serif;font-weight:700;font-size:14px;color:var(--acc);flex-shrink:0;border:1.5px solid rgba(26,111,196,.22)}
 .tc-author strong{display:block;font-size:13px;font-weight:600;color:var(--tl)}
 .tc-author span{font-size:12px;color:var(--ml)}
-
-/* ── ABOUT ── */
 .about-wrap{display:grid;grid-template-columns:1.1fr 1fr}
 .about-left{padding:90px 60px;display:flex;flex-direction:column;justify-content:center;background:var(--dk)}
 .about-left p{font-size:14.5px;color:var(--td2);line-height:1.87;margin-bottom:16px}
@@ -232,8 +203,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .about-imgs img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.56) saturate(.6);transition:filter .35s}
 .about-imgs img:hover{filter:brightness(.78) saturate(.88)}
 .about-imgs img.tall{grid-row:1/3;height:100%}
-
-/* ── CAREERS ── */
 .car-wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:80px;align-items:center}
 .car-img{width:100%;height:320px;object-fit:cover;border-radius:14px;display:block;filter:brightness(.82)}
 .car-left h2{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(24px,3vw,40px);line-height:1.1;color:var(--tl);margin-bottom:14px}
@@ -243,8 +212,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .role:hover{border-color:rgba(26,111,196,.35);transform:translateX(3px)}
 .role span{font-size:13.5px;font-weight:500;color:var(--tl)}
 .role em{font-style:normal;font-size:10.5px;color:var(--acc3);background:rgba(14,165,200,.08);border:1px solid rgba(14,165,200,.2);padding:3px 10px;border-radius:4px;font-weight:600}
-
-/* ── CONTACT ── */
 .contact-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:72px;align-items:start;max-width:1200px;margin:0 auto}
 .cf{display:flex;flex-direction:column;gap:15px}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:15px}
@@ -253,7 +220,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(14,165,200,.55);background:rgba(14,165,200,.04)}
 .field textarea{resize:vertical;min-height:118px}
 .field select option{background:var(--dk2)}
-.fok{display:none;background:rgba(14,165,200,.09);border:1px solid rgba(14,165,200,.3);border-radius:9px;padding:17px 22px;text-align:center;color:var(--acc3);font-weight:500;font-size:14px;line-height:1.55;margin-top:4px}
+.fok{display:none;background:rgba(14,165,200,.09);border:1px solid rgba(14,165,200,.3);border-radius:9px;padding:17px 22px;text-align:center;color:var(--acc3);font-weight:500;font-size:14px;margin-top:4px}
 .fok.show{display:block}
 .cinfo-card{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.04);border:1px solid rgba(14,165,200,.18);border-radius:10px;padding:14px 18px;text-decoration:none;transition:all .22s;position:relative;overflow:hidden;margin-bottom:10px}
 .cinfo-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--acc3);opacity:0;transition:opacity .22s}
@@ -264,8 +231,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .cinfo-val{font-size:13.5px;color:var(--td);font-weight:500;line-height:1.5}
 .cinfo-arrow{margin-left:auto;font-size:16px;color:var(--acc3);opacity:0;transition:opacity .2s;flex-shrink:0}
 .cinfo-card:hover .cinfo-arrow{opacity:1}
-
-/* ── MODAL ── */
 .mbg{display:none;position:fixed;inset:0;z-index:9999;background:rgba(5,8,12,.94);backdrop-filter:blur(16px);align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
 .mbg.open{display:flex}
 .mbox{background:var(--dk2);border:1px solid rgba(255,255,255,.13);border-radius:16px;width:100%;max-width:700px;padding:44px;position:relative;box-shadow:0 32px 80px rgba(0,0,0,.85);margin:auto}
@@ -282,10 +247,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;display:flex;ali
 .svc-inc-title{font-family:"Syne",sans-serif;font-weight:700;font-size:12px;color:var(--acc3);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
 .svc-ul{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:26px}
 .svc-ul li{font-size:13.5px;color:var(--td2);padding-left:18px;position:relative;line-height:1.55}
-.svc-ul li::before{content:"&#10003;";position:absolute;left:0;color:var(--acc3);font-size:12px;font-weight:700;top:1px}
+.svc-ul li::before{content:"\2713";position:absolute;left:0;color:var(--acc3);font-size:12px;font-weight:700;top:1px}
 .mbox-btns{display:flex;gap:12px;flex-wrap:wrap}
-
-/* ── FOOTER ── */
 footer{background:var(--dk2);border-top:1px solid var(--bdd);padding:64px 64px 32px}
 .fg{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
 .fl-logo{display:flex;align-items:center;gap:13px;margin-bottom:16px}
@@ -299,8 +262,6 @@ footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 footer ul a{color:var(--md);text-decoration:none;font-size:13px;transition:color .2s}
 footer ul a:hover{color:var(--td)}
 .fb{border-top:1px solid var(--bdd);padding-top:26px;display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:var(--md);flex-wrap:wrap;gap:10px}
-
-/* ── RESPONSIVE ── */
 @media(max-width:1200px){.bpo-grid{grid-template-columns:repeat(3,1fr)}.stat-row{grid-template-columns:repeat(3,1fr)}.fg{grid-template-columns:1fr 1fr}}
 @media(max-width:960px){
   nav{padding:0 22px}.nav-links{display:none}.ham{display:flex}
@@ -332,14 +293,10 @@ footer ul a:hover{color:var(--td)}
     <div><span class="logo-top">SERVIQUENT</span><span class="logo-btm">&#8212; Global Solutions &#8212;</span></div>
   </a>
   <ul class="nav-links">
-    <li><a href="#company">Company</a></li>
-    <li><a href="#bpo">BPO Services</a></li>
-    <li><a href="#it">IT Services</a></li>
-    <li><a href="#why">Why Us</a></li>
-    <li><a href="#industries">Industries</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="careers.html">Careers</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#company">Company</a></li><li><a href="#bpo">BPO Services</a></li>
+    <li><a href="#it">IT Services</a></li><li><a href="#why">Why Us</a></li>
+    <li><a href="#industries">Industries</a></li><li><a href="#process">Process</a></li>
+    <li><a href="careers.html">Careers</a></li><li><a href="#contact">Contact</a></li>
     <li><a href="#" class="nav-cta" id="navCta">Get a Quote</a></li>
   </ul>
   <button class="ham" id="hamBtn"><span></span><span></span><span></span></button>
@@ -351,16 +308,14 @@ footer ul a:hover{color:var(--td)}
   <a href="#" id="mobCta">Get a Quote</a>
 </div>
 
-<!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-video">
-    <video autoplay muted loop playsinline id="heroVid">
+  <div class="hero-bg"></div>
+  <div class="hero-vid">
+    <video autoplay muted loop playsinline>
       <source src="hero.mp4" type="video/mp4"/>
     </video>
-    <!-- Fallback: if video fails, show background image -->
-    <div style="position:absolute;inset:0;z-index:-1;background:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1800&q=80&auto=format&fit=crop') center/cover no-repeat"></div>
   </div>
-  <div class="hero-overlay"></div>
+  <div class="hero-dark"></div>
   <div class="hero-grid"></div>
   <div class="hero-c">
     <div class="eyebrow"><div class="pulse"></div>Trusted BPO &amp; IT Partner in 40+ Countries</div>
@@ -372,10 +327,9 @@ footer ul a:hover{color:var(--td)}
       <span class="htag">&#127973; Healthcare BPO</span><span class="htag">&#9878; Legal Process</span>
       <span class="htag">&#9729; Cloud Services</span><span class="htag">&#128274; Cybersecurity</span>
       <span class="htag">&#129302; AI &amp; Automation</span><span class="htag">&#128101; HR &amp; Payroll</span>
-      <span class="htag">&#128241; Social Media</span><span class="htag">&#129309; Virtual Assistance</span>
     </div>
     <div class="hero-btns">
-      <button class="btn btn-acc" id="heroQuoteBtn" style="font-size:15.5px;padding:16px 36px;box-shadow:0 0 44px rgba(14,165,200,.48)">Get a Free Consultation &#8594;</button>
+      <button class="btn btn-acc" id="heroQuoteBtn" style="font-size:15.5px;padding:16px 36px">Get a Free Consultation &#8594;</button>
       <a href="#bpo" class="btn btn-wht" style="font-size:15.5px;padding:16px 36px">Explore Services &#8595;</a>
     </div>
   </div>
@@ -393,7 +347,7 @@ footer ul a:hover{color:var(--td)}
   <span class="t-lbl">Trusted worldwide by</span>
   <div class="t-scroll"><div class="t-track">
     <span>HealthFirst</span><span>NovaBanc</span><span>TechServe Global</span><span>RetailPlus</span><span>InsuraCorp</span><span>LogiMax</span><span>EduGlobal</span><span>FinClear</span><span>MedBridge</span><span>LegalEdge</span>
-    <span>HealthFirst</span><span>NovaBanc</span><span>TechServe Global</span><span>RetailPlus</span><span>InsuraCorp</span><span>LogiMax</span><span>EduGlobal</span><span>FinClear</span><span>MedBridge</span><span>LegalEdge</span>
+    <span>HealthFirst</span><span>NovaBanc</span><span>TechServe Global</span><span>RetailPlus</span><span>InsuraCorp</span><span>LogiMax</span><span>EduGlobal</span><span>FinClear</span><span>MedBridge</span><span class>LegalEdge</span>
   </div></div>
 </div>
 
@@ -404,12 +358,12 @@ footer ul a:hover{color:var(--td)}
       <h2 class="ttl-l" style="margin-bottom:18px">One Parent Brand.<br/>Multiple Specialist Divisions.</h2>
       <p>We operate as <strong>Serviquent Global Solutions</strong> &#8212; the BPO and IT outsourcing arm of Serviquent Prime Solutions. A global professional services group trusted by hundreds of enterprises across 40+ countries.</p>
       <p>A trusted partner for <strong>Fortune 500 companies, fast-scaling startups, ISPs, utilities, financial institutions and healthcare providers</strong> worldwide.</p>
-      <p>This division focuses on <strong>BPO operations, IT managed services, debt recovery and intelligent process automation</strong> &#8212; combining the Serviquent brand reputation with deep domain expertise and AI-powered workflows built to deliver real, measurable outcomes.</p>
+      <p>This division focuses on <strong>BPO operations, IT managed services, debt recovery and intelligent process automation</strong> combining the Serviquent brand reputation with deep domain expertise.</p>
       <div class="co-vals">
         <div class="cv"><span class="ci">&#127919;</span><h4>Client-First Always</h4><p>Every process and decision built around your business outcomes.</p></div>
         <div class="cv"><span class="ci">&#128274;</span><h4>Security &amp; Compliance</h4><p>ISO 27001, HIPAA, GDPR, FDCPA &#8212; compliance built in from day one.</p></div>
-        <div class="cv"><span class="ci">&#127758;</span><h4>Global Yet Local</h4><p>Delivery centers worldwide with culturally aligned, language-matched teams.</p></div>
-        <div class="cv"><span class="ci">&#129302;</span><h4>Technology-Driven</h4><p>AI, RPA and real-time dashboards power every process we manage.</p></div>
+        <div class="cv"><span class="ci">&#127758;</span><h4>Global Yet Local</h4><p>Delivery centers worldwide with culturally aligned teams.</p></div>
+        <div class="cv"><span class="ci">&#129302;</span><h4>Technology-Driven</h4><p>AI, RPA and real-time dashboards power every process.</p></div>
       </div>
     </div>
     <div>
@@ -446,13 +400,13 @@ footer ul a:hover{color:var(--td)}
   </div>
   <div class="bpo-grid">
     <div class="sc" data-svc="cust"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#128222;</div><span class="sc-tag">24/7 Global</span></div><h3>Customer Support</h3><p>Omnichannel voice, chat, email &amp; social in 30+ languages, round the clock.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
-    <div class="sc" data-svc="debt"><img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#128176;</div><span class="sc-tag">Recovery</span></div><h3>Debt Collection &amp; Recovery</h3><p>Compliant first &amp; third-party debt recovery with skip tracing and negotiation.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
+    <div class="sc" data-svc="debt"><img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#128176;</div><span class="sc-tag">Recovery</span></div><h3>Debt Collection &amp; Recovery</h3><p>Compliant first &amp; third-party debt recovery with skip tracing.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
     <div class="sc" data-svc="fin"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#128202;</div><span class="sc-tag">Finance</span></div><h3>Finance &amp; Accounting</h3><p>Full AP/AR, payroll, general ledger, reporting and tax preparation.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
     <div class="sc" data-svc="data"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#128452;</div><span class="sc-tag">Back-Office</span></div><h3>Data Entry &amp; Management</h3><p>High-speed accurate data capture, cleansing, migration and digitization.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
-    <div class="sc" data-svc="health"><img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b6e?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#127973;</div><span class="sc-tag">Healthcare</span></div><h3>Healthcare BPO</h3><p>HIPAA-compliant medical billing, coding, claims processing and patient support.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
+    <div class="sc" data-svc="health"><img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b6e?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#127973;</div><span class="sc-tag">Healthcare</span></div><h3>Healthcare BPO</h3><p>HIPAA-compliant medical billing, coding, claims and patient support.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
     <div class="sc" data-svc="hr"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#128101;</div><span class="sc-tag">HR</span></div><h3>HR &amp; Payroll Processing</h3><p>End-to-end HR &#8212; onboarding, compliance and full payroll administration.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
     <div class="sc" data-svc="sales"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#128200;</div><span class="sc-tag">Sales</span></div><h3>Telemarketing &amp; Lead Gen</h3><p>Outbound B2B/B2C campaigns, appointment setting and CRM management.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
-    <div class="sc" data-svc="insur"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#127963;</div><span class="sc-tag">Insurance</span></div><h3>Insurance &amp; Mortgage</h3><p>Policy admin, claims handling, underwriting support and mortgage origination.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
+    <div class="sc" data-svc="insur"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#127963;</div><span class="sc-tag">Insurance</span></div><h3>Insurance &amp; Mortgage</h3><p>Policy admin, claims handling, underwriting and mortgage origination.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
     <div class="sc" data-svc="legal"><img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#9878;</div><span class="sc-tag">Legal</span></div><h3>Legal Process Outsourcing</h3><p>Contract review, legal research, paralegal support and eDiscovery.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
     <div class="sc" data-svc="social"><img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#128241;</div><span class="sc-tag">Digital</span></div><h3>Social Media &amp; Moderation</h3><p>24/7 community management, brand monitoring and social support.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
     <div class="sc" data-svc="va"><img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=600&q=80&auto=format&fit=crop" class="sc-img" alt=""/><div class="sc-grad"></div><div class="sc-bar"></div><div class="sc-body"><div class="sc-hd"><div class="sc-icon">&#129309;</div><span class="sc-tag">Virtual</span></div><h3>Virtual Assistant Services</h3><p>Dedicated remote executive assistants for admin, scheduling and operations.</p><button class="sc-btn">View Full Details &#8594;</button></div></div>
@@ -486,7 +440,7 @@ footer ul a:hover{color:var(--td)}
     <div class="itc"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80&auto=format&fit=crop" alt=""/><div class="itc-body"><h3><span>&#128274;</span> Cybersecurity Services</h3><p>Proactive 24/7 threat monitoring, vulnerability management and SOC operations. CISSP, CEH and CompTIA certified analysts on every shift.</p><ul><li>24/7 Security Operations Center</li><li>SIEM monitoring &amp; threat intel</li><li>Endpoint detection &amp; response</li><li>Vulnerability scanning &amp; patching</li><li>GDPR, ISO 27001 &amp; PCI-DSS</li><li>Incident response &amp; forensics</li></ul><button class="btn btn-sm btn-outl itq-btn">Get a Quote &#8594;</button></div></div>
     <div class="itc"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&auto=format&fit=crop" alt=""/><div class="itc-body"><h3><span>&#127760;</span> Network Admin &amp; NOC</h3><p>24/7 NOC, WAN/LAN management, SD-WAN and infrastructure monitoring &#8212; proactively detecting issues before they impact your business.</p><ul><li>24/7 NOC monitoring &amp; alerting</li><li>WAN / LAN design &amp; management</li><li>SD-WAN deployment &amp; support</li><li>Firewall &amp; VPN administration</li><li>Network performance &amp; QoS</li><li>Multi-site enterprise management</li></ul><button class="btn btn-sm btn-outl itq-btn">Get a Quote &#8594;</button></div></div>
     <div class="itc"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80&auto=format&fit=crop" alt=""/><div class="itc-body"><h3><span>&#129514;</span> Software Testing &amp; QA</h3><p>Manual, automated, performance and regression testing for web, mobile and enterprise applications integrated into your development cycle.</p><ul><li>Manual &amp; automated testing</li><li>Performance &amp; load testing</li><li>Mobile app testing (iOS &amp; Android)</li><li>API &amp; integration testing</li><li>UAT coordination &amp; sign-off</li><li>Test strategy &amp; documentation</li></ul><button class="btn btn-sm btn-outl itq-btn">Get a Quote &#8594;</button></div></div>
-    <div class="itc"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&auto=format&fit=crop" alt=""/><div class="itc-body"><h3><span>&#129302;</span> AI &amp; Process Automation</h3><p>RPA deployment, AI workflow automation and chatbot integration &#8212; transforming repetitive processes into streamlined, scalable and auditable operations.</p><ul><li>RPA development (UiPath, AA)</li><li>Intelligent document processing</li><li>AI chatbot &amp; virtual agent</li><li>Business workflow orchestration</li><li>AI data annotation &amp; training</li><li>Process mining &amp; analysis</li></ul><button class="btn btn-sm btn-outl itq-btn">Get a Quote &#8594;</button></div></div>
+    <div class="itc"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&auto=format&fit=crop" alt=""/><div class="itc-body"><h3><span>&#129302;</span> AI &amp; Process Automation</h3><p>RPA deployment, AI workflow automation and chatbot integration &#8212; transforming repetitive processes into streamlined, scalable operations.</p><ul><li>RPA development (UiPath, AA)</li><li>Intelligent document processing</li><li>AI chatbot &amp; virtual agent</li><li>Business workflow orchestration</li><li>AI data annotation &amp; training</li><li>Process mining &amp; analysis</li></ul><button class="btn btn-sm btn-outl itq-btn">Get a Quote &#8594;</button></div></div>
   </div>
 </section>
 
@@ -543,28 +497,27 @@ footer ul a:hover{color:var(--td)}
     <div class="proc-body">
       <h3>Zero-Disruption Transition Guarantee</h3>
       <p>Every new engagement begins with a dedicated transition manager. Our structured onboarding ensures your existing operations continue without interruption while we build, train and integrate your outsourced teams in parallel.</p>
-      <p>We invest heavily in knowledge transfer, documentation and agent training before a single call is taken or process handled live. By go-live, your extended team is indistinguishable from your own employees.</p>
+      <p>We invest heavily in knowledge transfer, documentation and agent training before a single call is taken or process handled live.</p>
       <button class="btn btn-sm btn-acc proc-btn" style="margin-top:6px">Start the Conversation &#8594;</button>
     </div>
   </div>
   <div class="steps">
-    <div class="step"><div class="sn">01</div><h4>Discovery &amp; Scoping</h4><p>Deep-dive into your operations, volume, compliance needs and goals.</p></div>
-    <div class="step"><div class="sn">02</div><h4>Solution Design</h4><p>Custom roadmap &#8212; team structure, SLAs, tech stack, pricing and KPIs.</p></div>
-    <div class="step"><div class="sn">03</div><h4>30-Day Pilot</h4><p>Controlled pilot to validate quality, accuracy and process alignment.</p></div>
+    <div class="step"><div class="sn">01</div><h4>Discovery &amp; Scoping</h4><p>Deep-dive into your operations, volume and compliance needs.</p></div>
+    <div class="step"><div class="sn">02</div><h4>Solution Design</h4><p>Custom roadmap &#8212; team structure, SLAs, tech stack and KPIs.</p></div>
+    <div class="step"><div class="sn">03</div><h4>30-Day Pilot</h4><p>Controlled pilot to validate quality and process alignment.</p></div>
     <div class="step"><div class="sn">04</div><h4>Full Ramp-Up</h4><p>Scale to full volume with trained teams and full integrations.</p></div>
-    <div class="step"><div class="sn">05</div><h4>Continuous Optimisation</h4><p>Weekly QA reviews, real-time dashboards, monthly business reviews.</p></div>
+    <div class="step"><div class="sn">05</div><h4>Continuous Optimisation</h4><p>Weekly QA reviews, dashboards, monthly business reviews.</p></div>
   </div>
 </section>
 
 <section class="sec sec-lt" id="testi">
   <div class="testi-top">
     <div><div class="lbl-l">Client Voices</div><h2 class="ttl-l" style="margin-bottom:0">Trusted by Operations Leaders</h2></div>
-    <p style="font-size:14px;color:var(--ml);max-width:250px;line-height:1.65;text-align:right">Real results from real clients across industries and geographies.</p>
   </div>
   <div class="testi-grid">
-    <div class="tc"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"The team integrated into our brand within weeks. Response times dropped 60%, first-call resolution hit 91% and CSAT reached an all-time high. The quality monitoring dashboard alone justified the entire engagement."</blockquote><div class="tc-author"><div class="av">RK</div><div><strong>Rajesh Kumar</strong><span>VP Operations, HealthFirst India</span></div></div></div>
-    <div class="tc"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"We brought them in for a debt portfolio we had written off. In 90 days they doubled our recovery rate &#8212; 100% FDCPA compliant, zero consumer complaints. The professionalism and transparency was outstanding."</blockquote><div class="tc-author"><div class="av">SM</div><div><strong>Sarah Mitchell</strong><span>CFO, NovaBanc Financial Services</span></div></div></div>
-    <div class="tc"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"We scaled from 20 to 200 agents in 12 days for peak season. Quality scores actually improved during the ramp. That level of scalability with consistent quality and zero SLA breaches is genuinely rare."</blockquote><div class="tc-author"><div class="av">AD</div><div><strong>Amit Desai</strong><span>Head of CX, RetailPlus Global</span></div></div></div>
+    <div class="tc"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"The team integrated into our brand within weeks. Response times dropped 60%, first-call resolution hit 91% and CSAT reached an all-time high."</blockquote><div class="tc-author"><div class="av">RK</div><div><strong>Rajesh Kumar</strong><span>VP Operations, HealthFirst India</span></div></div></div>
+    <div class="tc"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"In 90 days they doubled our recovery rate &#8212; 100% FDCPA compliant, zero consumer complaints. The professionalism and transparency was outstanding."</blockquote><div class="tc-author"><div class="av">SM</div><div><strong>Sarah Mitchell</strong><span>CFO, NovaBanc Financial Services</span></div></div></div>
+    <div class="tc"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"We scaled from 20 to 200 agents in 12 days. Quality scores actually improved during the ramp. Zero SLA breaches &#8212; genuinely rare."</blockquote><div class="tc-author"><div class="av">AD</div><div><strong>Amit Desai</strong><span>Head of CX, RetailPlus Global</span></div></div></div>
   </div>
 </section>
 
@@ -574,8 +527,8 @@ footer ul a:hover{color:var(--td)}
       <div class="lbl-d">About This Division</div>
       <h2 class="ttl-d" style="margin-bottom:18px">Serviquent Global Solutions &#8212;<br/>BPO &amp; IT Outsourcing Worldwide</h2>
       <p>We are the BPO and IT managed services division of Serviquent Prime Solutions &#8212; headquartered in Gurugram, Haryana, India with offices in Casper, Wyoming, USA.</p>
-      <p>Our delivery infrastructure spans South Asia, Southeast Asia, Eastern Europe and Latin America, providing 24/7 language-matched coverage across all major geographies within a single unified service framework.</p>
-      <p>Every member of our leadership team brings 10+ years of BPO or enterprise IT outsourcing experience, delivering for some of the world's most demanding clients.</p>
+      <p>Our delivery infrastructure spans South Asia, Southeast Asia, Eastern Europe and Latin America, providing 24/7 language-matched coverage across all major geographies.</p>
+      <p>Every member of our leadership team brings 10+ years of BPO or enterprise IT outsourcing experience.</p>
       <div class="certs"><span class="cert">ISO 9001</span><span class="cert">ISO 27001</span><span class="cert">HIPAA</span><span class="cert">GDPR</span><span class="cert">PCI-DSS</span><span class="cert">FDCPA</span><span class="cert">FCA Aware</span></div>
     </div>
     <div class="about-imgs">
@@ -587,8 +540,7 @@ footer ul a:hover{color:var(--td)}
 </section>
 
 <section class="sec sec-lt2" id="careers-banner" style="position:relative;overflow:hidden">
-  <div style="position:absolute;right:-60px;top:-60px;width:280px;height:280px;border-radius:50%;background:rgba(14,165,200,.05);pointer-events:none"></div>
-  <div class="car-wrap" style="position:relative;z-index:1">
+  <div class="car-wrap">
     <div class="car-left">
       <div class="lbl-l">Join Our Team</div>
       <h2>Build Your Career With<br/>Serviquent Global Solutions</h2>
@@ -623,7 +575,7 @@ footer ul a:hover{color:var(--td)}
         </div>
         <div class="frow">
           <div class="field"><label>Business Email</label><input type="email" name="email" placeholder="john@company.com" required/></div>
-          <div class="field"><label>Phone / WhatsApp</label><input type="tel" name="phone" placeholder="+1 555 000 0000"/></div>
+          <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="+1 555 000 0000"/></div>
         </div>
         <div class="frow">
           <div class="field"><label>Company</label><input type="text" name="company" placeholder="Acme Corp" required/></div>
@@ -643,7 +595,7 @@ footer ul a:hover{color:var(--td)}
             </select>
           </div>
           <div class="field"><label>Team Size</label>
-            <select name="team_size"><option value="">Select range...</option>
+            <select name="team_size"><option value="">Select...</option>
               <option>1-10 Agents</option><option>11-50 Agents</option><option>51-200 Agents</option><option>200+ Agents</option>
             </select>
           </div>
@@ -654,9 +606,9 @@ footer ul a:hover{color:var(--td)}
       </form>
       <div>
         <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80&auto=format&fit=crop" style="width:100%;height:200px;object-fit:cover;border-radius:12px;display:block;margin-bottom:22px;filter:brightness(.65)" alt=""/>
-        <a href="/cdn-cgi/l/email-protection#3950575f56794a5c4b4f50484c5c574d175a5654" class="cinfo-card">
+        <a href="mailto:info@serviquent.com" class="cinfo-card">
           <div class="cinfo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0ea5c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="cinfo-lbl">Email</div><div class="cinfo-val"><span class="__cf_email__" data-cfemail="b0d9ded6dff0c3d5c2c6d9c1c5d5dec49ed3dfdd">[email&#160;protected]</span></div></div>
+          <div><div class="cinfo-lbl">Email</div><div class="cinfo-val">info@serviquent.com</div></div>
           <div class="cinfo-arrow">&#8599;</div>
         </a>
         <a href="tel:+13073173044" class="cinfo-card">
@@ -716,11 +668,10 @@ footer ul a:hover{color:var(--td)}
       <li><a href="#company">About Us</a></li>
       <li><a href="https://www.serviquent.com" target="_blank">Serviquent Prime &#8599;</a></li>
       <li><a href="#process">Our Process</a></li>
-      <li><a href="#testi">Client Stories</a></li>
       <li><a href="careers.html">Careers</a></li>
     </ul></div>
     <div><h5>Contact &amp; Social</h5><ul>
-      <li><a href="/cdn-cgi/l/email-protection#137a7d757c53607661657a6266767d673d707c7e"><span class="__cf_email__" data-cfemail="0f666169604f7c6a7d79667e7a6a617b216c6062">[email&#160;protected]</span></a></li>
+      <li><a href="mailto:info@serviquent.com">info@serviquent.com</a></li>
       <li><a href="tel:+13073173044">+1 (307) 317-3044</a></li>
       <li><a href="tel:+918433674751">+91 84336 74751</a></li>
       <li><a href="https://www.linkedin.com/company/serviquent" target="_blank">LinkedIn &#8599;</a></li>
@@ -770,144 +721,102 @@ footer ul a:hover{color:var(--td)}
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-/* ===== SERVICE DATA ===== */
+<script>
 var SD={
-cust:{n:"Customer Support",t:"24/7 Global",i:"https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=720&q=85&auto=format&fit=crop",d:"Our omnichannel customer support teams represent your brand with professionalism and accuracy across voice, live chat, email and social media in 30+ languages, 24 hours a day, 365 days a year. Every agent undergoes rigorous brand-specific training, QA calibration and performance coaching.",k:"CSAT improvement: +35% within 60 days | First-call resolution: 88%+ | AHT reduction: 22%",l:["Inbound &amp; outbound voice calls","Live chat (Intercom, Zendesk)","Email triage &amp; resolution","Social media DM management","Complaint escalation workflows","30+ language support","After-hours &amp; holiday coverage","CRM integration (Salesforce, HubSpot)","Real-time CSAT monitoring","Agent coaching &amp; QA"]},
-debt:{n:"Debt Collection &amp; Recovery",t:"FDCPA / FCA Compliant",i:"https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=720&q=85&auto=format&fit=crop",d:"Our debt recovery specialists combine deep compliance expertise with professional negotiation to maximise recovery rates. All agents are FDCPA and FCA certified. We operate across first-party, third-party, early-stage arrears and charged-off portfolios.",k:"Recovery rate: 2x within 90 days | 100% FDCPA/FCA compliant | Zero consumer complaints",l:["First-party arrears management","Third-party debt recovery","Skip tracing &amp; debtor locate","Payment plan negotiation","Friendly-to-firm campaigns","Legal pre-litigation referral","Real-time collection dashboard","FDCPA, FCA, ASIC compliant","CRM integration","Monthly portfolio reviews"]},
-fin:{n:"Finance &amp; Accounting",t:"SOX &amp; GAAP Compliant",i:"https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=720&q=85&auto=format&fit=crop",d:"Our finance teams are staffed with qualified accountants, CAs and financial analysts under strict quality controls and compliance frameworks &#8212; ensuring accuracy and auditability on every transaction. We integrate with your existing ERP and accounting platforms with zero disruption.",k:"Month-end close reduction: 60% | Transaction accuracy: 99.8% | Cost saving vs in-house: 55%",l:["Accounts payable &amp; receivable","General ledger &amp; journal entries","Month-end &amp; year-end close","Payroll &amp; statutory compliance","Financial statements &amp; reporting","Budgeting &amp; forecasting","Cash flow &amp; treasury support","ERP integration (SAP, QuickBooks)","Tax preparation &amp; filing","Internal audit support"]},
-data:{n:"Data Entry &amp; Management",t:"99.5%+ Accuracy SLA",i:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=720&q=85&auto=format&fit=crop",d:"We handle high-volume data processing with speed, precision and absolute confidentiality within ISO 27001 certified, access-controlled environments with full audit trails. Up to 50,000+ records per team per day with a guaranteed 99.5%+ accuracy SLA.",k:"Processing: 50,000+ records/day | Accuracy: 99.5%+ guaranteed | TAT: same-day or next-day",l:["Form &amp; document data entry","Database building &amp; deduplication","OCR &amp; image-to-text conversion","Data migration between systems","Document digitisation &amp; archiving","Data validation &amp; quality checking","Product data management","PDF, Excel &amp; CSV extraction","API-based integration","NDA-protected handling"]},
-health:{n:"Healthcare BPO",t:"HIPAA Certified",i:"https://images.unsplash.com/photo-1631815589968-fdb09a223b6e?w=720&q=85&auto=format&fit=crop",d:"All our healthcare BPO agents are HIPAA certified and trained on Epic, Cerner, Meditech and AdvancedMD. We maintain strict data security protocols, regular compliance audits and fully segregated data environments to protect patient data at every step.",k:"First-pass claims: 97%+ | Denial rate reduction: 40% | RCM cost saving: 45-60%",l:["Medical billing &amp; coding (ICD-10)","Insurance claims submission","Prior authorisation management","Denial management &amp; appeals","Revenue cycle management (RCM)","Patient scheduling","Patient financial counselling","EMR/EHR data entry (Epic, Cerner)","Insurance eligibility verification","HIPAA-compliant data handling"]},
-hr:{n:"HR &amp; Payroll Processing",t:"Multi-Country Payroll",i:"https://images.unsplash.com/photo-1552664730-d307ca884978?w=720&q=85&auto=format&fit=crop",d:"We manage the full employee lifecycle &#8212; allowing your HR team to focus on strategy while we handle administrative complexity. Trained on all major HRIS platforms, managing payroll across multiple countries and tax jurisdictions with a payroll error rate below 0.1%.",k:"Payroll error rate: less than 0.1% | Cost reduction vs in-house: 40% | Multi-country capability",l:["Monthly &amp; bi-weekly payroll","Statutory compliance &amp; tax filings","Employee onboarding documentation","Benefits enrolment &amp; admin","Leave &amp; attendance management","HR helpdesk &amp; query resolution","Exit management &amp; offboarding","HR analytics &amp; reporting","HRIS integration (Workday, SAP)","Multi-country payroll"]},
-sales:{n:"Telemarketing &amp; Lead Generation",t:"TCPA / DNC Compliant",i:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=720&q=85&auto=format&fit=crop",d:"Our sales development teams operate as a fully integrated extension of your sales organisation &#8212; generating qualified pipeline, booking appointments and managing CRM data quality. All TCPA and DNC compliant with full call recording and QA monitoring.",k:"Lead conversion: 18-22% | Appointment show rate: 78%+ | CRM accuracy: 97%",l:["Outbound B2B &amp; B2C lead gen","Cold calling &amp; warm follow-up","Appointment scheduling","CRM data entry &amp; enrichment","Market research &amp; profiling","Product promotion calls","Upsell &amp; renewal campaigns","Win-back campaigns","Campaign reporting &amp; analytics","TCPA, DNC &amp; GDPR compliant"]},
-insur:{n:"Insurance &amp; Mortgage Processing",t:"Specialist Trained",i:"https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=720&q=85&auto=format&fit=crop",d:"Our insurance and mortgage specialists deliver fast, accurate processing with full audit trails across new business applications, policy renewals, mortgage origination and claims management.",k:"Processing TAT: less than 24hrs | Accuracy: 99.2% | Licensed team available",l:["Policy administration &amp; renewals","New business processing","Claims intake &amp; processing","Underwriting documentation","Mortgage origination support","Title search &amp; document prep","Flood certificate processing","Compliance documentation","Customer portal support","Broker &amp; agent liaison"]},
-legal:{n:"Legal Process Outsourcing",t:"Paralegal Qualified",i:"https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=720&q=85&auto=format&fit=crop",d:"Our LPO team consists of trained paralegals and law graduates working under qualified attorneys &#8212; delivering high-quality legal support at a fraction of in-house costs. All workflows protected by NDAs, confidentiality agreements and tiered access controls.",k:"Cost saving vs in-house: 65% | Contract review TAT: less than 4hrs | ABA-compliant",l:["Contract drafting &amp; review","Legal research &amp; memoranda","Litigation document management","eDiscovery document review","Compliance monitoring","IP research &amp; filing support","Corporate governance docs","Legal document formatting","Case management support","NDA-protected workflows"]},
-social:{n:"Social Media &amp; Content Moderation",t:"24/7 Coverage",i:"https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=720&q=85&auto=format&fit=crop",d:"Our moderation and community management teams operate across Facebook, Instagram, TikTok, Twitter/X, YouTube and Reddit with platform-specific training, cultural sensitivity frameworks and real-time escalation protocols.",k:"Response SLA: under 15 minutes | 24/7/365 coverage | 20+ languages",l:["UGC moderation (text, image, video)","Community engagement","Brand reputation monitoring","Social media customer support","Crisis communication &amp; escalation","Trust &amp; safety enforcement","Influencer outreach support","Social listening &amp; sentiment","Platform-specific training","Real-time escalation protocols"]},
-va:{n:"Virtual Assistant Services",t:"Dedicated Professionals",i:"https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=720&q=85&auto=format&fit=crop",d:"Our virtual assistants are highly educated, English-proficient professionals &#8212; background-checked, NDA-bound and available in dedicated or shared models from 20 hours per week. Clients consistently save 20-35 hours per week from day one.",k:"Time saving: 20-35 hrs/week | Onboarding: 3-5 business days | From 20hrs/week",l:["Calendar &amp; schedule management","Email inbox management","Travel booking &amp; logistics","Research &amp; data compilation","Document preparation","Vendor &amp; client liaison","Personal assistance","Project tracking &amp; reporting","Meeting notes &amp; minutes","CRM data entry &amp; updates"]},
-qa:{n:"Quality Assurance &amp; Audit",t:"ISO 9001 Aligned",i:"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=720&q=85&auto=format&fit=crop",d:"Our QA division provides independent, objective monitoring and auditing for outsourced and in-house teams &#8212; delivering actionable insights using calibrated scorecards and root cause analysis aligned to ISO 9001 principles.",k:"Quality score improvement: +22% in 90 days | SLA breach reduction: 35% | Monthly QBR",l:["Voice, chat &amp; email monitoring","Calibrated QA scoring","Agent coaching &amp; feedback","Process compliance audits","Root cause &amp; trend analysis","SLA performance tracking","CSAT / NPS reporting","Quality improvement roadmap","QA dashboards &amp; scorecards","Monthly business reviews"]}
+cust:{n:"Customer Support",t:"24/7 Global",i:"https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=720&q=85&auto=format&fit=crop",d:"Our omnichannel customer support teams represent your brand with professionalism and accuracy across voice, live chat, email and social media in 30+ languages, 24 hours a day, 365 days a year.",k:"CSAT improvement: +35% in 60 days | First-call resolution: 88%+ | AHT reduction: 22%",l:["Inbound and outbound voice calls","Live chat (Intercom, Zendesk)","Email triage and resolution","Social media DM management","Multilingual support 30+ languages","After-hours and holiday coverage","CRM integration (Salesforce, HubSpot)","Real-time CSAT monitoring","Agent coaching and QA","24/7 worldwide coverage"]},
+debt:{n:"Debt Collection and Recovery",t:"FDCPA / FCA Compliant",i:"https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=720&q=85&auto=format&fit=crop",d:"Our debt recovery specialists combine deep compliance expertise with professional negotiation to maximise recovery rates. All agents are FDCPA and FCA certified and trained in modern behavioural collection techniques.",k:"Recovery rate: 2x in 90 days | 100% FDCPA/FCA compliant | Zero consumer complaints",l:["First-party arrears management","Third-party debt recovery","Skip tracing and debtor locate","Payment plan negotiation","Friendly-to-firm campaigns","Legal pre-litigation referral","Real-time collection dashboard","FDCPA, FCA, ASIC compliant","CRM integration","Monthly portfolio reviews"]},
+fin:{n:"Finance and Accounting",t:"SOX and GAAP Compliant",i:"https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=720&q=85&auto=format&fit=crop",d:"Our finance teams are staffed with qualified accountants, CAs and financial analysts under strict quality controls and compliance frameworks ensuring accuracy on every transaction.",k:"Month-end close reduction: 60% | Transaction accuracy: 99.8% | Cost saving vs in-house: 55%",l:["Accounts payable and receivable","General ledger and journal entries","Month-end and year-end close","Payroll and statutory compliance","Financial statements and reporting","Budgeting and forecasting","Cash flow and treasury support","ERP integration (SAP, QuickBooks)","Tax preparation and filing","Internal audit support"]},
+data:{n:"Data Entry and Management",t:"99.5%+ Accuracy SLA",i:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=720&q=85&auto=format&fit=crop",d:"We handle high-volume data processing with speed, precision and absolute confidentiality within ISO 27001 certified, access-controlled environments. Up to 50,000+ records per team per day.",k:"Processing: 50,000+ records/day | Accuracy: 99.5%+ guaranteed | TAT: same-day",l:["Form and document data entry","Database building and deduplication","OCR and image-to-text conversion","Data migration between systems","Document digitisation and archiving","Data validation and quality checking","Product data management","PDF, Excel and CSV extraction","API-based integration","NDA-protected handling"]},
+health:{n:"Healthcare BPO",t:"HIPAA Certified",i:"https://images.unsplash.com/photo-1631815589968-fdb09a223b6e?w=720&q=85&auto=format&fit=crop",d:"All our healthcare BPO agents are HIPAA certified and trained on Epic, Cerner, Meditech and AdvancedMD. We maintain strict data security protocols and fully segregated data environments.",k:"First-pass claims: 97%+ | Denial rate reduction: 40% | RCM cost saving: 45-60%",l:["Medical billing and coding (ICD-10)","Insurance claims submission","Prior authorisation management","Denial management and appeals","Revenue cycle management","Patient scheduling","Patient financial counselling","EMR/EHR data entry (Epic, Cerner)","Insurance eligibility verification","HIPAA-compliant data handling"]},
+hr:{n:"HR and Payroll Processing",t:"Multi-Country Payroll",i:"https://images.unsplash.com/photo-1552664730-d307ca884978?w=720&q=85&auto=format&fit=crop",d:"We manage the full employee lifecycle allowing your HR team to focus on strategy. Trained on all major HRIS platforms, managing payroll across multiple countries with a payroll error rate below 0.1%.",k:"Payroll error rate: less than 0.1% | Cost reduction vs in-house: 40% | Multi-country",l:["Monthly and bi-weekly payroll","Statutory compliance and tax filings","Employee onboarding documentation","Benefits enrolment and admin","Leave and attendance management","HR helpdesk and query resolution","Exit management and offboarding","HR analytics and reporting","HRIS integration (Workday, SAP)","Multi-country payroll"]},
+sales:{n:"Telemarketing and Lead Generation",t:"TCPA / DNC Compliant",i:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=720&q=85&auto=format&fit=crop",d:"Our sales development teams operate as a fully integrated extension of your sales organisation, generating qualified pipeline and booking appointments. All TCPA and DNC compliant.",k:"Lead conversion: 18-22% | Appointment show rate: 78%+ | CRM accuracy: 97%",l:["Outbound B2B and B2C lead gen","Cold calling and warm follow-up","Appointment scheduling","CRM data entry and enrichment","Market research and profiling","Product promotion calls","Upsell and renewal campaigns","Win-back campaigns","Campaign reporting and analytics","TCPA, DNC and GDPR compliant"]},
+insur:{n:"Insurance and Mortgage Processing",t:"Specialist Trained",i:"https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=720&q=85&auto=format&fit=crop",d:"Our insurance and mortgage specialists deliver fast, accurate processing with full audit trails across new business applications, policy renewals, mortgage origination and claims management.",k:"Processing TAT: less than 24hrs | Accuracy: 99.2% | Licensed team available",l:["Policy administration and renewals","New business processing","Claims intake and processing","Underwriting documentation","Mortgage origination support","Title search and document prep","Flood certificate processing","Compliance documentation","Customer portal support","Broker and agent liaison"]},
+legal:{n:"Legal Process Outsourcing",t:"Paralegal Qualified",i:"https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=720&q=85&auto=format&fit=crop",d:"Our LPO team consists of trained paralegals and law graduates working under qualified attorneys, delivering high-quality legal support at a fraction of in-house costs.",k:"Cost saving vs in-house: 65% | Contract review TAT: less than 4hrs | ABA-compliant",l:["Contract drafting and review","Legal research and memoranda","Litigation document management","eDiscovery document review","Compliance monitoring","IP research and filing support","Corporate governance docs","Legal document formatting","Case management support","NDA-protected workflows"]},
+social:{n:"Social Media and Content Moderation",t:"24/7 Coverage",i:"https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=720&q=85&auto=format&fit=crop",d:"Our moderation teams operate across Facebook, Instagram, TikTok, Twitter/X, YouTube and Reddit with platform-specific training and real-time escalation protocols.",k:"Response SLA: under 15 minutes | 24/7/365 coverage | 20+ languages",l:["UGC moderation (text, image, video)","Community engagement","Brand reputation monitoring","Social media customer support","Crisis communication and escalation","Trust and safety enforcement","Influencer outreach support","Social listening and sentiment","Platform-specific training","Real-time escalation protocols"]},
+va:{n:"Virtual Assistant Services",t:"Dedicated Professionals",i:"https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=720&q=85&auto=format&fit=crop",d:"Our virtual assistants are highly educated, English-proficient professionals, background-checked, NDA-bound and available from 20 hours per week. Clients consistently save 20-35 hours per week.",k:"Time saving: 20-35 hrs/week | Onboarding: 3-5 business days | From 20hrs/week",l:["Calendar and schedule management","Email inbox management","Travel booking and logistics","Research and data compilation","Document preparation","Vendor and client liaison","Personal assistance","Project tracking and reporting","Meeting notes and minutes","CRM data entry and updates"]},
+qa:{n:"Quality Assurance and Audit",t:"ISO 9001 Aligned",i:"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=720&q=85&auto=format&fit=crop",d:"Our QA division provides independent, objective monitoring and auditing for outsourced and in-house teams, delivering actionable insights using calibrated scorecards aligned to ISO 9001 principles.",k:"Quality score improvement: +22% in 90 days | SLA breach reduction: 35% | Monthly QBR",l:["Voice, chat and email monitoring","Calibrated QA scoring","Agent coaching and feedback","Process compliance audits","Root cause and trend analysis","SLA performance tracking","CSAT and NPS reporting","Quality improvement roadmap","QA dashboards and scorecards","Monthly business reviews"]}
 };
 
-/* ===== MODAL HELPERS ===== */
-function openModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden'}
-function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow=''}
+function openModal(id){document.getElementById(id).classList.add("open");document.body.style.overflow="hidden";}
+function closeModal(id){document.getElementById(id).classList.remove("open");document.body.style.overflow="";}
 
-/* ===== NAV ===== */
-window.addEventListener('scroll',function(){document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>60)});
+window.addEventListener("scroll",function(){document.getElementById("mainNav").classList.toggle("scrolled",window.scrollY>60);});
 
-document.getElementById('hamBtn').addEventListener('click',function(){
-  this.classList.toggle('open');
-  document.getElementById('mobMenu').classList.toggle('open');
-});
-document.querySelectorAll('#mobMenu a').forEach(function(a){
-  a.addEventListener('click',function(){
-    document.getElementById('hamBtn').classList.remove('open');
-    document.getElementById('mobMenu').classList.remove('open');
-  });
-});
+document.getElementById("hamBtn").addEventListener("click",function(){this.classList.toggle("open");document.getElementById("mobMenu").classList.toggle("open");});
+document.querySelectorAll("#mobMenu a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("hamBtn").classList.remove("open");document.getElementById("mobMenu").classList.remove("open");});});
 
-/* ===== QUOTE MODAL ===== */
-function openQuote(){openModal('quoteModal')}
-function closeQuote(){closeModal('quoteModal')}
+function openQuote(){openModal("quoteModal");}
+function closeQuote(){closeModal("quoteModal");}
 
-document.getElementById('heroQuoteBtn').addEventListener('click',openQuote);
-document.getElementById('navCta').addEventListener('click',function(e){e.preventDefault();openQuote()});
-document.getElementById('mobCta').addEventListener('click',function(e){e.preventDefault();openQuote()});
-document.getElementById('quoteClose').addEventListener('click',closeQuote);
-document.getElementById('quoteModal').addEventListener('click',function(e){if(e.target===this)closeQuote()});
-document.querySelectorAll('.proc-btn').forEach(function(b){b.addEventListener('click',openQuote)});
-document.querySelectorAll('.itq-btn').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();openQuote()})});
+document.getElementById("heroQuoteBtn").addEventListener("click",openQuote);
+document.getElementById("navCta").addEventListener("click",function(e){e.preventDefault();openQuote();});
+document.getElementById("mobCta").addEventListener("click",function(e){e.preventDefault();openQuote();});
+document.getElementById("quoteClose").addEventListener("click",closeQuote);
+document.getElementById("quoteModal").addEventListener("click",function(e){if(e.target===this)closeQuote();});
+document.querySelectorAll(".proc-btn").forEach(function(b){b.addEventListener("click",openQuote);});
+document.querySelectorAll(".itq-btn").forEach(function(b){b.addEventListener("click",function(e){e.stopPropagation();openQuote();});});
 
-/* ===== SERVICE MODAL ===== */
-document.getElementById('svcClose').addEventListener('click',function(){closeModal('svcModal')});
-document.getElementById('svcModal').addEventListener('click',function(e){if(e.target===this)closeModal('svcModal')});
+document.getElementById("svcClose").addEventListener("click",function(){closeModal("svcModal");});
+document.getElementById("svcModal").addEventListener("click",function(e){if(e.target===this)closeModal("svcModal");});
 
 function openSvc(key){
   var d=SD[key];
   if(!d)return;
-  var li='';
-  for(var i=0;i<d.l.length;i++)li+='<li>'+d.l[i]+'</li>';
-  document.getElementById('svcContent').innerHTML=
-    '<div style="font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#0ea5c8;margin-bottom:10px">'+d.t+'</div>'+
-    '<h2 style="font-family:Syne,sans-serif;font-weight:800;font-size:24px;color:#dde4ec;margin-bottom:16px">'+d.n+'</h2>'+
-    '<img src="'+d.i+'" class="svc-hero-img" alt="'+d.n+'"/>'+
-    '<p class="svc-long-desc">'+d.d+'</p>'+
-    '<div class="svc-kpi"><h5>Performance Benchmarks</h5><p>'+d.k+'</p></div>'+
-    '<div class="svc-inc-title">Everything Included</div>'+
-    '<ul class="svc-ul">'+li+'</ul>'+
-    '<div class="mbox-btns">'+
-      '<button class="btn btn-acc" id="svcQBtn">Get a Quote &#8594;</button>'+
-      '<button class="btn" style="background:rgba(255,255,255,.07);color:#dde4ec;border:1px solid rgba(255,255,255,.1)" id="svcCBtn">Close</button>'+
-    '</div>';
-  openModal('svcModal');
-  document.getElementById('svcQBtn').addEventListener('click',function(){closeModal('svcModal');openQuote()});
-  document.getElementById('svcCBtn').addEventListener('click',function(){closeModal('svcModal')});
+  var li="";
+  for(var i=0;i<d.l.length;i++)li+="<li>"+d.l[i]+"</li>";
+  document.getElementById("svcContent").innerHTML=
+    "<div style='font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#0ea5c8;margin-bottom:10px'>"+d.t+"</div>"+
+    "<h2 style='font-family:Syne,sans-serif;font-weight:800;font-size:24px;color:#dde4ec;margin-bottom:16px'>"+d.n+"</h2>"+
+    "<img src='"+d.i+"' class='svc-hero-img' alt='"+d.n+"'/>"+
+    "<p class='svc-long-desc'>"+d.d+"</p>"+
+    "<div class='svc-kpi'><h5>Performance Benchmarks</h5><p>"+d.k+"</p></div>"+
+    "<div class='svc-inc-title'>Everything Included</div>"+
+    "<ul class='svc-ul'>"+li+"</ul>"+
+    "<div class='mbox-btns'>"+
+    "<button class='btn btn-acc' id='svcQBtn'>Get a Quote &#8594;</button>"+
+    "<button class='btn' style='background:rgba(255,255,255,.07);color:#dde4ec;border:1px solid rgba(255,255,255,.1)' id='svcCBtn'>Close</button>"+
+    "</div>";
+  openModal("svcModal");
+  document.getElementById("svcQBtn").addEventListener("click",function(){closeModal("svcModal");openQuote();});
+  document.getElementById("svcCBtn").addEventListener("click",function(){closeModal("svcModal");});
 }
 
-document.querySelectorAll('.sc').forEach(function(card){
-  var key=card.getAttribute('data-svc');
-  card.addEventListener('click',function(){openSvc(key)});
-  var btn=card.querySelector('.sc-btn');
-  if(btn)btn.addEventListener('click',function(e){e.stopPropagation();openSvc(key)});
+document.querySelectorAll(".sc").forEach(function(card){
+  var key=card.getAttribute("data-svc");
+  card.addEventListener("click",function(){openSvc(key);});
+  var btn=card.querySelector(".sc-btn");
+  if(btn)btn.addEventListener("click",function(e){e.stopPropagation();openSvc(key);});
 });
 
-/* ===== ESC KEY ===== */
-document.addEventListener('keydown',function(e){
-  if(e.key==='Escape'){closeQuote();closeModal('svcModal')}
-});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){closeQuote();closeModal("svcModal");}});
 
-/* ===== FORM SUBMIT (Resend via /api/contact) ===== */
-function getFormData(form){
-  var d={},els=form.querySelectorAll('input,select,textarea');
-  els.forEach(function(el){if(el.name)d[el.name]=el.value});
-  return d;
-}
-function mailtoFallback(data){
-  var s=encodeURIComponent('BPO Enquiry - '+(data.company||data.first_name||'New Client'));
-  var b=encodeURIComponent('Name: '+(data.first_name||'')+' '+(data.last_name||'')+
-    '
-Email: '+(data.email||'')+'
-Phone: '+(data.phone||'N/A')+
-    '
-Company: '+(data.company||'N/A')+'
-Service: '+(data.service||'N/A')+
-    '
+function getFormData(form){var d={};form.querySelectorAll("input,select,textarea").forEach(function(el){if(el.name)d[el.name]=el.value;});return d;}
+function mailtoFallback(data){var s=encodeURIComponent("BPO Enquiry - "+(data.company||data.first_name||"New Client"));var b=encodeURIComponent("Name: "+(data.first_name||"")+" "+(data.last_name||"")+"
+Email: "+(data.email||"")+"
+Phone: "+(data.phone||"N/A")+"
+Company: "+(data.company||"N/A")+"
+Service: "+(data.service||"N/A")+"
 
 Message:
-'+(data.message||''));
-  window.location.href='mailto:info@serviquent.com?subject='+s+'&body='+b;
-}
-function submitForm(formId,btnId,okId,ftype){
-  var form=document.getElementById(formId);
-  var btn=document.getElementById(btnId);
-  var ok=document.getElementById(okId);
-  form.addEventListener('submit',function(e){
+"+(data.message||""));window.location.href="mailto:info@serviquent.com?subject="+s+"&body="+b;}
+
+function setupForm(formId,btnId,okId,ftype){
+  document.getElementById(formId).addEventListener("submit",function(e){
     e.preventDefault();
-    var data=getFormData(form);
-    data.form_type=ftype;
-    var orig=btn.innerHTML;
-    btn.innerHTML='Sending...';btn.disabled=true;
-    fetch('/api/contact',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify(data)
-    }).then(function(r){
-      if(r.ok){
-        form.reset();
-        ok.innerHTML='&#10003; Sent to info@serviquent.com! We will respond within one business day.';
-        ok.classList.add('show');
-        btn.innerHTML='&#10003; Sent!';
-        setTimeout(function(){ok.classList.remove('show');btn.innerHTML=orig;btn.disabled=false;if(ftype==='quote')closeQuote();},7000);
-      }else{
-        mailtoFallback(data);btn.innerHTML=orig;btn.disabled=false;
-      }
-    }).catch(function(){
-      mailtoFallback(getFormData(form));btn.innerHTML=orig;btn.disabled=false;
-    });
+    var data=getFormData(this);data.form_type=ftype;
+    var btn=document.getElementById(btnId);var ok=document.getElementById(okId);
+    var orig=btn.innerHTML;btn.innerHTML="Sending...";btn.disabled=true;
+    var form=this;
+    fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(data)})
+    .then(function(r){
+      if(r.ok){form.reset();ok.innerHTML="&#10003; Sent to info@serviquent.com! We will respond within one business day.";ok.classList.add("show");btn.innerHTML="&#10003; Sent!";setTimeout(function(){ok.classList.remove("show");btn.innerHTML=orig;btn.disabled=false;if(ftype==="quote")closeQuote();},7000);}
+      else{mailtoFallback(data);btn.innerHTML=orig;btn.disabled=false;}
+    })
+    .catch(function(){mailtoFallback(getFormData(form));btn.innerHTML=orig;btn.disabled=false;});
   });
 }
-
-submitForm('contactForm','cfBtn','cfOk','contact');
-submitForm('quoteForm','qBtn','qOk','quote');
+setupForm("contactForm","cfBtn","cfOk","contact");
+setupForm("quoteForm","qBtn","qOk","quote");
 </script>
 </body>
 </html>
