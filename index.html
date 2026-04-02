@@ -881,4 +881,22 @@ function setupForm(formId,btnId,okId,ftype){
         ok.innerHTML="&#10003; Message sent successfully! We will be in touch within one business day.";
         ok.classList.add("show");
         btn.innerHTML="&#10003; Sent!";
-        setTimeout(function(){ok.classList.remove("show");btn.innerHTML=orig;btn.disabled=false;if(ftype==="quote")closeQuote
+        setTimeout(function(){ok.classList.remove("show");btn.innerHTML=orig;btn.disabled=false;if(ftype==="quote")closeQuote();},7000);
+      }else{
+        mailtoFallback(data);
+        btn.innerHTML=orig;
+        btn.disabled=false;
+      }
+    }).catch(function(){
+      mailtoFallback(getFormData(formRef));
+      btn.innerHTML=orig;
+      btn.disabled=false;
+    });
+  });
+}
+
+setupForm("contactForm","cfBtn","cfOk","contact");
+setupForm("quoteForm","qBtn","qOk","quote");
+</script>
+</body>
+</html>
