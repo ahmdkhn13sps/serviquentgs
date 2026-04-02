@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/api/contact", "dest": "/api/contact.js" },
+    { "src": "/careers", "dest": "/careers.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
